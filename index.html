@@ -18,13 +18,30 @@
 
     <div class="content">
         <p class="title">PNR Status</p>
-        <form action="result.html" class="input-div">
-            <input placeholder="Enter 10 Digit PNR Number" type="number" name="pnrNumber" id="pnrNumber" autocomplete="off">
-            <button id="pnr-btn">Check PNR Status</button>
+        <form id="myForm" method="GET" action="result.html" class="input-div">
+            <input placeholder="Enter 10 Digit PNR Number" type="text" name="pnrNumber" id="pnrNumber" autocomplete="off" required>
+            <button type="submit" value="Submit" id="pnr-btn">Check PNR Status</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent form submission
+          
+          // Get the value of the input field
+          var phoneNumberInput = document.getElementById("pnrNumber").value;
     
+          // Check if the input contains exactly 10 digits and only numbers
+          if (!/^\d{10}$/.test(phoneNumberInput)) {
+            document.getElementById("pnrNumber").value = ""; // Clear the invalid input
+            document.getElementById("pnrNumber").placeholder = "Invalid PNR Number";
+            document.getElementById("pnrNumber").classList.add("error");
+          } else {
+            document.getElementById("pnrNumber").classList.remove("error"); // Remove error styling
+            // Perform further actions or submit the form
+            this.submit();
+          }
+        });
+      </script>
 </body>
 </html>

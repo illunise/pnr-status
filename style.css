@@ -6,6 +6,18 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+input {
+    border: 1px solid transparent;
+}
+
 header {
     box-shadow: 0 6px 6px 0 rgba(187, 187, 187, 0.2);
 }
@@ -64,9 +76,140 @@ header {
     background-color: var(--primary-color);
 }
 
+/* Result Style Started */
+
+.main-section {
+    margin: auto;
+    width: 55%;
+}
+
+.error-section {
+    margin: auto;
+    width: 55%;
+}
+
+.pnr-card {
+    margin-top: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.pnr-details {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.pnrNum {
+    margin: 0 0 0 5px;
+}
+
+.change {
+    margin-left: 24px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--secondary-bg);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.train-de {
+    margin-top: 26px;
+    font-weight: 500;
+}
+
+.journey-de {
+    color: #858585;
+    margin-top: 10px;
+}
+
+.pass-title {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.chart-status {
+    float: right;
+    color: var(--secondary-color);
+    font-size: 16px;
+}
+
+table {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin-top: 12px !important;
+    gap: 4rem;
+}
+
+td, th, table {
+    padding: 8px 8px 8px 0;
+}
+
+
+
+th {
+    font-size: medium;
+    color: #858585;
+    text-align: start;
+    font-weight: 400;
+}
+
+td {
+    font-size: 18px;
+}
+
+.current {
+    color: #5db85b;
+    font-weight: 500;
+}
+
+.error-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.error_logo {
+    text-align: center;
+    width: 4rem;
+    margin-top: 16px;
+}
+
+.error-msg {
+    font-size: 24px;
+    margin-top: 16px;
+    color: crimson;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.back-btn {
+    margin: 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--ascent-color);
+    background-color: var(--primary-bg);
+    padding: 13px 24px;
+}
+
+/* Result Style Ended */
+
 :root {
     --primary-color: #000000;
-    --secondary-color: #ffffff;
+    --secondary-color: #42a047;
+    --ascent-color: #fff;
     --primary-bg: #42a047;
     --secondary-bg: #3c9140;
 }
