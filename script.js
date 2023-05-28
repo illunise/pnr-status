@@ -32,6 +32,8 @@ const pnr_Number = urlParams.get("pnrNumber");
 
 var mainContent = document.getElementById("main-content");
 var errorContent = document.getElementById("error-content");
+var loadDiv = document.getElementById("load-div");
+var contentSection = document.getElementById("details-section");
 
 var pnrNumber = document.getElementById("pnrNum");
 var pnrNumber2 = document.getElementById("pnrNum2");
@@ -125,8 +127,12 @@ fetchData(pnr_Number).then((data) => {
   table_body.appendChild(tr);
   }
 
+  loadDiv.style.visibility = "hidden";
+
 }).catch((error) => {
   mainContent.style.position = "absolute";
   mainContent.style.visibility = "hidden";
+
+  loadDiv.style.visibility = "hidden";
   console.log(error)
 });
