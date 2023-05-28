@@ -27,7 +27,6 @@ function fetchData(pnrNumber) {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-// Get the value of the parameter
 const pnr_Number = urlParams.get("pnrNumber");
 
 var mainContent = document.getElementById("main-content");

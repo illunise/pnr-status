@@ -266,6 +266,41 @@ td {
     padding: 13px 24px;
 }
 
+.refer-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: .8rem;
+    margin-top: 1rem;
+}
+
+.refer-card {
+    margin-top: 0;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+}
+
+.refer-card svg, .refer-card img {
+    width: 40px;
+    vertical-align: middle;
+}
+
+.refer-card p {
+    margin-left: 18px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.refer-card a {
+    margin: 0 0 0 auto;
+    padding: 9px 20px;
+}
+
+.arrow-svg {
+    margin: 0 0 0 auto;
+}
+
 /* Result Style Ended */
 
 :root {
