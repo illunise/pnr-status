@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F0F0F0;
+    background-color: var(--primary-bg);
 }
 
 a {
@@ -21,6 +21,7 @@ input {
 
 header {
     box-shadow: 0 6px 6px 0 rgba(187, 187, 187, 0.2);
+    background-color: #fff;
 }
 
 .nav {
@@ -37,6 +38,8 @@ header {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -52,12 +55,16 @@ header {
 .input-div {
     text-align: center;
     display: block;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #pnrNumber {
     border-radius: 8px 0 0 8px;
-    border: 1px solid #d6d6d6;
-    width: 40%;
+    width: 50%;
+
     padding: 35px 24px;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
@@ -67,13 +74,11 @@ header {
     border-radius: 0 8px 8px 0;
     border-color: #4cae4c;
     border: none;
-    padding: 32px 0;
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
-    margin: -5px;
     cursor: pointer;
     color: #fff;
-    padding: 35px 24px;
+    padding: 37px 24px;
     background-color: var(--primary-color);
 }
 
@@ -302,14 +307,64 @@ td {
     margin: 0 0 0 auto;
 }
 
+.extra-div {
+    width: 55%;
+    margin: auto;
+}
+
 /* Result Style Ended */
 
+
+
+
+@media only screen and (max-width: 768px) {
+
+    header {
+        width: 100%;
+    }
+
+    .content {
+        padding: .5rem;
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+
+    .input-div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: relative;
+        width: 100%;
+    }
+
+    #pnrNumber {
+        width: 90%;
+        border-radius: 8px;
+        padding: 15px 14px;
+    }
+
+    #pnr-btn {
+        width: 100%;
+        border-radius: 8px;
+        padding: 15px 14px;
+    }
+
+    .extra-div {
+        width: 90%;
+    }
+
+    .refer-section {
+        margin-top: 38px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
 :root {
     --primary-color: #000000;
-    --secondary-color: #42a047;
+    --secondary-color: #fff;
     --ascent-color: #fff;
-    --primary-bg: #42a047;
-    --secondary-bg: #3c9140;
+    --primary-bg: #AA77FF;
+    --secondary-bg: #62CDFF;
 
 
 	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
