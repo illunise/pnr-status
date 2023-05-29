@@ -50,8 +50,10 @@ var table_body = document.getElementById("table-body");
 pnrNumber.innerHTML = pnr_Number;
 pnrNumber2.innerHTML = pnr_Number;
 
+errorContent.style.visibility = "hidden";
+
 fetchData(pnr_Number).then((data) => {
-  errorContent.style.visibility = "hidden";
+  
   trainNo.innerHTML = data.trainNumber;
   trainName.innerHTML = data.trainName;
   chartStatusC.innerHTML = data.chartStatus;
@@ -129,6 +131,7 @@ fetchData(pnr_Number).then((data) => {
   loadDiv.style.visibility = "hidden";
 
 }).catch((error) => {
+  errorContent.style.visibility = "visible";
   mainContent.style.position = "absolute";
   mainContent.style.visibility = "hidden";
 
