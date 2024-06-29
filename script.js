@@ -3,7 +3,7 @@ function fetchData(pnrNumber) {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "9c4ce5a8f8msh00d94e70c6238b3p146c85jsn6d490a6351b0",
+      "X-RapidAPI-Key": "d07d2e8fccmshc4e2d39b6927c37p1b48b7jsn3f3676bd47c3",
       "X-RapidAPI-Host":
         "real-time-pnr-status-api-for-indian-railways.p.rapidapi.com",
     },
