@@ -122,7 +122,7 @@ fetchData(pnr_Number).then((data) => {
     tr.innerHTML = `
     <td>${data.passengerDetailsDTO[index].serialNo}</td>
     <td class="current">${data.passengerDetailsDTO[index].seatStts}</td>
-    <td>${data.passengerDetailsDTO[index].seatNo}</td>
+    <td>${data.passengerDetailsDTO[index].displayName}</td>
     <td>${data.passengerDetailsDTO[index].coachNo}</td>
   `;
   table_body.appendChild(tr);
