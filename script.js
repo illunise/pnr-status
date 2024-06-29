@@ -113,7 +113,7 @@ fetchData(pnr_Number).then((data) => {
   const formattedDate3 = `${day3}, ${dateNumber3} ${month3}`;
   fullDate.innerHTML = formattedDate3;
   jclass.innerHTML = data.journeyClass;
-  quota.innerHTML = data.quota;
+  quota.innerHTML = data.passengerDetailsDTO[index].quotaCode;
 
   var no_passenger = data.noOfPassenger;
 
@@ -123,6 +123,7 @@ fetchData(pnr_Number).then((data) => {
     <td>${data.passengerDetailsDTO[index].serialNo}</td>
     <td class="current">${data.passengerDetailsDTO[index].seatStts}</td>
     <td>${data.passengerDetailsDTO[index].displayName}</td>
+    console.log(data.passengerDetailsDTO[index].displayName)
     <td>${data.passengerDetailsDTO[index].coachNo}</td>
   `;
   table_body.appendChild(tr);
