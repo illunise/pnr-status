@@ -1,5 +1,5 @@
 function fetchData(pnrNumber) {
-  const url = `https://real-time-pnr-status-api-for-indian-railways.p.rapidapi.com/indianrail/${pnrNumber}`;
+  const url = `https://real-time-pnr-status-api-for-indian-railways.p.rapidapi.com/name/${pnrNumber}`;
   const options = {
     method: "GET",
     headers: {
