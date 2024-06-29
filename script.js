@@ -54,11 +54,11 @@ errorContent.style.visibility = "hidden";
 
 fetchData(pnr_Number).then((data) => {
   
-  trainNo.innerHTML = data.trainNumber;
+  trainNo.innerHTML = data.trainNum;
   trainName.innerHTML = data.trainName;
-  chartStatusC.innerHTML = data.chartStatus;
-  srcStation.innerHTML = data.sourceStation;
-  const srcTime = data.dateOfJourney;
+  chartStatusC.innerHTML = data.chartStts;
+  srcStation.innerHTML = data.boardingPoint;
+  const srcTime = data.departureDate;
   const date = new Date(srcTime);
   let hour = date.getHours();
   const minute = date.getMinutes();
@@ -66,7 +66,7 @@ fetchData(pnr_Number).then((data) => {
   const formattedHour = hour.toString().padStart(2, "0");
   const formattedMinute = minute.toString().padStart(2, "0");
   srcStationTime.innerHTML = `${formattedHour}:${formattedMinute}`;
-  dstStation.innerHTML = data.destinationStation;
+  dstStation.innerHTML = data.reservationUpTo;
   const dstTime = data.arrivalDate;
   const date2 = new Date(dstTime);
   let hour2 = date2.getHours();
@@ -115,15 +115,15 @@ fetchData(pnr_Number).then((data) => {
   jclass.innerHTML = data.journeyClass;
   quota.innerHTML = data.quota;
 
-  var no_passenger = data.numberOfpassenger;
+  var no_passenger = data.noOfPassenger;
 
   for (let index = 0; index < no_passenger; index++) {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-    <td>${data.passengerList[index].passengerSerialNumber}</td>
-    <td class="current">${data.passengerList[index].currentStatusDetails}</td>
-    <td>${data.passengerList[index].bookingStatusDetails}</td>
-    <td>${data.passengerList[index].passengerCoachPosition}</td>
+    <td>${data.passengerDetailsDTO[index].serialNo}</td>
+    <td class="current">${data.passengerDetailsDTO[index].seatStts}</td>
+    <td>${data.passengerDetailsDTO[index].seatNo}</td>
+    <td>${data.passengerDetailsDTO[index].coachNo}</td>
   `;
   table_body.appendChild(tr);
   }
